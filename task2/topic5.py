@@ -6,6 +6,6 @@ fun(1,2,9,10)
 
 
 # **kwrgs
-def example(**args):
-    print(args,'args')
+def example(**kwrgs):
+    print(kwrgs,'args')
 example(a=10,b=20)    
