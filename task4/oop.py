@@ -31,7 +31,7 @@ class School:
     # class var
     school_nam = "The Punjab School"
 
-    # contsructer instance nethod
+    # contsructer instance method
     def __init__(self, name, age):
         self.name = name
         self.age = age  
@@ -57,4 +57,61 @@ print(S1.school_nam)
 print(S1.add(2,4))
 
      
+
+class A:
+
+   num1=int(input("Enter the 1st number:"))
+   num2=int(input("Enter the 2nd number:"))
+   def Add(self):
+       
+       print("Addition",self.num1 +self.num2)
+
+        
+class B(A):
+    def Sub(self):
+        print("Addition",self.num1 - self.num2)
+
+A1=B()
+A1.Add()   
+A1.Sub()     
+
+# Multilevel Inheritance
+
+class Father:
+    surname = "Ali"
+    
+    def __init__(self, age):
+        self.age = age
+
+class Son(Father):   
+    def __init__(self, age):
+        super().__init__(age)  
+        print("Son Constructor")
+
+    def Show(self):
+        print("Mohsin", self.surname)
+        print("Age", self.age)
+
+class GrandSon(Son):
+    def __init__(self, age):
+        super().__init__(age)
+        print("GrandSon Constructo")
+
+    def Displ(self):
+        print("Abrar", self.surname)
+        print("Age", self.age)
+
+S1 = Son(50)
+S1.Show()
+
+S2 = GrandSon(20)
+S2.Displ()
+
+
+    
+
+     
+     
+
+
 
